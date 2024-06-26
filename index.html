@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rust game of life</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        background: #1a1a1a;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <script type="module">
+      import init, { run } from "./pkg/game_of_life.js";
+      (async () => {
+        await init();
+        run("game");
+      })();
+    </script>
+  </body>
+</html>
